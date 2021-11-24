@@ -63,10 +63,11 @@ function renderData(playlists) {
         if(idList > playlists.length) {
             return
         }
-        
+
         idTrack ++
 
         let src_music = playlists[idTrack].src;
+        let title = playlists[idTrack].title;
         let listNow = document.querySelector(`[data-list="${idList}"]`)
         if(playing) {
             if(playTrack != src_music) {
@@ -93,7 +94,7 @@ function renderData(playlists) {
     
         playTrack = src_music
     })
-    
+
     
 }
 
@@ -136,4 +137,3 @@ music.addEventListener("ended", function() {
         btn_play.setAttribute("class", "fa fa-play")
     })
 })
-

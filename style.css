@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --primary-color: #F5F3EB;
+    --secondary-color: #605B48;
+    --title-size: 42px;
+    --header-size: 20px;
+    --body-size: 18px;
+    --action-size: 16px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    background-image: url(images/bg.jpg);
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 0;
+    font-size: var(--header-size);
+    transition: ease-in .3s;
+    z-index: 20;
+}
+
+.header.active {
+    background-color: var(--primary-color);
+    padding: 1.3rem 0;
+    box-shadow: 1px 1px 18px rgba(0,0,0,0.080);
+}
+
+.main {
+    padding-top: 4rem;
+}
+
+.main .main_content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 50px;
+    align-items: center;
+}
+
+.main .hero h1 {
+    font-size: var(--title-size);
+}
+
+.main .hero p {
+    font-size: var(--body-size);
+    color: var(--secondary-color);
+    padding: 20px 0 40px 0;
+}
+
+.main .hero button {
+    outline: none;
+    border: none;
+    font-size: var(--body-size);
+    padding: 15px 30px;
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 15px;
+    transition: ease-in .3s;
+}
+
+.main .hero button:hover {
+    transform: scale(0.95);
+}
+
+.main .playlist ul {
+    list-style-type: none;
+}
+
+.main .playlist ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 20px 50px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.main .playlist ul li:nth-child(even) {
+    margin-left: 40px;
+}
+
+.main .playlist ul li:nth-child(odd) {
+    margin-right: 40px;
+}
+
+.main .playlist ul li p {
+    font-size: var(--body-size);
+    font-weight: 600;
+}
+
+.main .playlist ul li i {
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    :root {
+        --title-size: 30px;
+        --header-size: 18px;
+        --body-size: 13px;
+        --action-size: 16px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    :root {
+        --title-size: 32px;
+        --header-size: 18px;
+        --body-size: 16px;
+        --action-size: 16px;
+    }
+
+    .wrapper {
+        background-position: left;
+    }
+    
+    .main {
+        padding: 2rem 0;
+    }
+
+    .main .main_content {
+        display: grid;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .main .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .main .playlist ul li {
+        padding: 25px 40px;
+    }
+
+    .main .playlist ul li:nth-child(even) {
+        margin-left: 20px;
+    }
+    
+    .main .playlist ul li:nth-child(odd) {
+        margin-right: 20px;
+    }
+    
+    
+}
+
+@media (max-width: 478px) {
+    :root {
+        --title-size: 28px;
+        --header-size: 16px;
+        --body-size: 14px;
+        --action-size: 16px;
+    }
+
+    .main .playlist ul li {
+        padding: 15px 24px;
+        border-radius: 15px;
+    }
+
+    .main .playlist ul li i {
+        font-size: 16px;
+    }
+}

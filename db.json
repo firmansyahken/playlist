@@ -1,0 +1,33 @@
+{
+    "playlist": [
+        {
+            "title": "Blue Bird",
+            "src": "bluebird.mp3"
+        },
+        {
+            "title": "Hikaru Nara",
+            "src": "hikarunara.mp3"
+        },
+        {
+            "title": "Grand Escape",
+            "src": "grandescape.mp3"
+        },
+       
+        {
+            "title": "Netsujou no Spectrum",
+            "src": "netsujou.mp3"
+        },
+        {
+            "title": "Kaikai Kitan",
+            "src": "kaikaikitan.mp3"
+        },
+        {
+            "title": "Black Catcher",
+            "src": "blackcatcher.mp3"
+        },
+        {
+            "title": "Orange 7",
+            "src": "orange.mp3"
+        }
+    ]
+}

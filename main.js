@@ -37,14 +37,14 @@ getData()
 function renderData(playlists) {
     let template = ''
     let i = 1
-    playlists.map(playlist => {
+    playlists.map((playlist, index) => {
         template += `
         <li>
             <div class="detail">
                 <p>${i++}. ${playlist.title}</p>
             </div>
             <div class="play">
-                <i class="fa fa-play" id="btn_play" data-id="${playlist.src}" data-list="${i - 1}""></i>
+                <i class="fa fa-play" id="btn_play" data-id="${playlist.src}" data-list="${index}""></i>
             </div>
         </li>`
     })
@@ -63,15 +63,15 @@ function renderData(playlists) {
         if(idList > playlists.length) {
             return
         }
+        
+        idTrack ++
 
         let src_music = playlists[idTrack].src;
-        let title = playlists[idTrack].title;
         let listNow = document.querySelector(`[data-list="${idList}"]`)
         if(playing) {
             if(playTrack != src_music) {
                 playing = true
                 music.src = "music/"+src_music
-                idTrack = src_music
                 listNow.setAttribute("class", "fa fa-pause")
                 music.play()
             } else {
